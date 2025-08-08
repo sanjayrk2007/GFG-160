@@ -1,0 +1,22 @@
+class Solution {                                              //DAY 1 - SECOND LARGEST ELEMENT OF AN ARRAY
+  public:
+    int getSecondLargest(vector<int> &arr) {
+        int n=arr.size();
+        int max=INT_MIN;
+        int secondmax=INT_MIN;
+        for(int i=0;i<n;i++){
+            if(arr[i]>max){
+                secondmax=max;
+                max=arr[i];
+            }
+            else if(arr[i]>secondmax && arr[i]!=max){
+                secondmax=arr[i];
+            }
+        }
+        if(secondmax==INT_MIN){
+            return -1;
+        }else{
+            return secondmax;
+        }
+    }
+};
