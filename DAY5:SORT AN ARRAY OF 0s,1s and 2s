@@ -1,0 +1,18 @@
+class Solution {
+  public:
+    void sort012(vector<int>& arr) {
+        int n=arr.size();
+        int count[3]={0,0,0};
+        for(int i=0;i<n;i++){
+            count[arr[i]]++;
+        }
+        int c=0;
+        for(int i=0;i<3;i++){
+            while(count[i]>0){
+                arr[c++]=i;
+                count[i]--;
+            }
+        }
+        
+    }
+};
