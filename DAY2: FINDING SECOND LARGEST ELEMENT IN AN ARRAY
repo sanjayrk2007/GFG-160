@@ -1,4 +1,4 @@
-class Solution {                                              //DAY 1 - SECOND LARGEST ELEMENT OF AN ARRAY
+class Solution {                                              
   public:
     int getSecondLargest(vector<int> &arr) {
         int n=arr.size();
